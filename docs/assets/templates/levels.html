@@ -12,18 +12,22 @@
           </button>
         </div>
         
+        <div class="grid-container">
 
-        <div class="message">Escoge uno de los siguientes niveles. Mientras más aciertes más estrellas obtendrás.</div>
+          <div class="message">Escoge uno de los siguientes niveles. Mientras más aciertes más estrellas obtendrás.</div>
 
-      <div class="selec-level">
-        {{for quiz}}
-        <div class="quiz-panel">
-          <button class="testinit" data-category="{{:#parent.parent.data.id}}" data-quiz="{{:id}}">
-            {{:title}} 
-          </button>
-          <div class="score" data-category="{{:#parent.parent.data.id}}" data-quiz="{{:id}}"></div>
+          <div class="selec-level">
+            {{for quiz}}
+            <div class="quiz-panel">
+              <button class="testinit" data-category="{{:#parent.parent.data.id}}" data-quiz="{{:id}}">
+                {{:title}} 
+              </button>
+              <div class="score" data-category="{{:#parent.parent.data.id}}" data-quiz="{{:id}}"></div>
+            </div>
+            {{/for}}
+          </div>
         </div>
-        {{/for}}
-      </div>
+    
+    
     </div>
   </script>

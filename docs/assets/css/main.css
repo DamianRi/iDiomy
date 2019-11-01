@@ -601,6 +601,14 @@
   font-family: 'Denk One', sans-serif;
 }
 
+.resume .stars .star {
+  width: 150px;
+}
+
+.resume .stars .no-star {
+  width: 100px;
+}
+
 .resume .buttons {
   background-color: transparent;
 }
@@ -699,6 +707,7 @@
 
 .score img {
   margin: 0px 4px;
+  width: 30px;
 }
 
 .score .score-foreground {
@@ -764,9 +773,6 @@
 .selec-level {
   position: relative;
   margin: auto;
-  top: 30%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .estrellas {

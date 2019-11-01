@@ -57,51 +57,51 @@ function showNext(n) {
     $('.body-second-style').removeClass('body-second-style').addClass('body');
     if(result_percentage === 0){
       $('.result-message').html("No obtuviste ninguna estrella. Inténtalo de nuevo! ");
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
 
     }else if (result_percentage <= .2 && result_percentage > 0){
       $('.result-message').html("Puedes mejorar. ¡Inténtalo de nuevo! ");
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');  
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage <= .4 && result_percentage > .2){
       $('.result-message').html("¡Muy bien! ");
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage <= .6 && result_percentage > .4){
       $('.result-message').html("¡Muy bien! ");
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage < 1 && result_percentage > .6){
       $('.result-message').html("¡Muy bien! ");
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/no-star.png', width: '100px', height: '100px'}))
+      $('.stars').append($('<img>',{class:'no-star',src:'assets/img/resultado_quiz/no-star.png'}))
     }else if (result_percentage === 1){
       $('.result-message').html("¡Felicidades! Demuestra tus habilidades en los demás niveles y categorías.<br>");
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
-      $('.stars').append($('<img>',{id:'star',src:'assets/img/resultado_quiz/star.png', width: '150px', height: '150px'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
+      $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');
     }
   } else {

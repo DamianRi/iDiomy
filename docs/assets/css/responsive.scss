@@ -41,7 +41,7 @@
         font-family: 'Chewy', cursive;
         padding-top: 10%;
         margin-top: 10%;
-        font-size: 25px;
+        font-size: 1.5em;
         background-color: #cdedf6;
         text-align: center;
         background-color: transparent;
@@ -58,6 +58,9 @@
         #texto-introductorio{
             font-weight: bolder;
             font-size: 0.75em;
+        }
+        .banderas{
+            width: 15%;
         }
         .skip-intro{
             width: 75%;
@@ -90,6 +93,9 @@
     }
 
     .idiomas{
+        .texto-idioma{
+            font-size: 1.5em;
+        }
         .idioma{
             margin: 0;
             padding: 0;
@@ -98,13 +104,27 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: auto;
-
-            .grid-item{
-                img{
-                    //height: 100px;
-                }
-            }
         }
+        button{
+            cursor: pointer;
+            width: 50%;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #3ab2b2;
+            border-radius: 20px;
+            box-shadow: 0 4px #003333;
+            border: 4px solid #003333;
+            margin-bottom: 10px;
+        }
+    
+        button:active {
+            background-color: #3ab2b2;
+            box-shadow: 0 2px #012c2c;
+            transform: translateY(4px);    
+        }
+    
     }
 
     .title {
@@ -122,7 +142,7 @@
         float: right;
     }
 
-
+    // Sección de las categorías
     .panel{
         .category{
             padding: 0;
@@ -140,10 +160,27 @@
         }
     }
 
-    .message{
-        font-size: 1.2em;
-        letter-spacing: 0;
+    .levels{
+        .message{
+            font-size: 1.2em;
+            letter-spacing: 0;
+        }
+        .testinit{
+            box-shadow: 0 4px #FFBB2F;
+            margin: 20px;
+        }
+
+        .score{
+            width: auto;
+            min-width: 100px;
+            height: 20px;
+            img{
+                width: 20px;
+            }
+        }
     }
+
+
     // Secciones de introducción a las palabras
     #quiz-data{
         .nivel{
@@ -170,8 +207,11 @@
             margin-left: 1em;
             margin-right: 1em;
             .content{
-                padding: 2px;
-                font-size: 1.5em;
+                padding: 1px;
+                font-size: 1.2em;
+                p{
+                    margin: 0;
+                }
             }
         }
         .next-intro{
@@ -219,7 +259,7 @@
         margin: 0 10px 0 10px;
         width: auto;
         .pregunta{
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin: 0;
         }
         .picture{
@@ -228,12 +268,39 @@
 
         .answer{
             .answer-button{
-                margin: 15px 0 0 0;
+                margin: 10px 0 0 0;
                 width: 90%;
             }
         }
 
 
+    }
+
+    .resume{
+        .stars{
+            .star{
+              width: 20%;
+            }
+            .no-star{
+              width: 15%;
+            }
+        }
+        .result-message{
+            font-size: 150%;
+        }
+        .buttons{
+            #reload img{
+                width: 60px;
+                height: 60px;
+            }
+            #menu img{
+                width: 50px;
+            }
+            #siguienteNivel img{
+                width: 60px;
+                height: 60px;
+            }
+        }
     }
 
 }

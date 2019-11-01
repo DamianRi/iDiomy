@@ -548,6 +548,14 @@
   h1{
     font-family: 'Denk One', sans-serif;
   }
+  .stars{
+    .star{
+      width: 150px;
+    }
+    .no-star{
+      width: 100px;
+    }
+  }
 }
 
 .resume .buttons {
@@ -637,6 +645,7 @@
   border-radius: 999px;
   img{
     margin: 0px 4px;
+    width: 30px;
   }
 
   .score-foreground {
@@ -705,9 +714,9 @@
 .selec-level{
   position: relative;
   margin: auto;
-  top: 30%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  //top: 30%;
+  //-ms-transform: translateY(-50%);
+  //transform: translateY(-50%);
 }
 
 .estrellas{
