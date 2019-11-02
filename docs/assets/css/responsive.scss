@@ -351,11 +351,6 @@
             display: grid;
             grid-template-columns: auto;
 
-            .grid-item{
-                img{
-                    //height: 120px;
-                }
-            }
         }
     }
 
@@ -368,11 +363,6 @@
         .grid-container{
             display: grid;
             grid-template-columns: auto auto;
-            .grid-item{
-                img{
-                    //height: 120px;
-                }
-            }
         }
     }
     .message{
