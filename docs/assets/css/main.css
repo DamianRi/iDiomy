@@ -618,7 +618,7 @@
   padding: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: transparent;
+  background-color: #003333;
   border: 5px solid black;
   border-radius: 999px;
   text-align: center;
@@ -631,6 +631,7 @@
 .resume .buttons #reload:hover {
   -webkit-animation: animated pulse;
           animation: animated pulse;
+  background-color: #FEBF01;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
@@ -645,7 +646,7 @@
   padding: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: transparent;
+  background-color: #003333;
   border: 5px solid #000;
   border-radius: 999px;
   text-align: center;
@@ -665,6 +666,7 @@
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   cursor: pointer;
+  background-color: #FEBF01;
 }
 
 .resume .buttons #siguienteNivel {
@@ -672,7 +674,7 @@
   padding: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: transparent;
+  background-color: #003333;
   border: 5px solid black;
   border-radius: 999px;
   text-align: center;
@@ -692,6 +694,7 @@
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   cursor: pointer;
+  background-color: #FEBF01;
 }
 
 .score {

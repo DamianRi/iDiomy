@@ -121,6 +121,14 @@
             box-shadow: 0 4px #003333;
     border: 4px solid #003333;
     margin-bottom: 10px;
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
   .idiomas button:active {
     background-color: #3ab2b2;
@@ -146,6 +154,16 @@
     padding: 0;
     margin: 0;
   }
+  .panel .category button {
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
   .panel .grid-container {
     display: -ms-grid;
     display: grid;
@@ -163,6 +181,14 @@
     -webkit-box-shadow: 0 4px #FFBB2F;
             box-shadow: 0 4px #FFBB2F;
     margin: 20px;
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
   .levels .score {
     width: auto;
@@ -182,6 +208,8 @@
   }
   #quiz-data .botones.skip {
     padding: 10px;
+    -webkit-box-shadow: 0 4px #834426;
+            box-shadow: 0 4px #834426;
   }
   #quiz-data .picture .fluid-img {
     max-width: 50%;
@@ -201,6 +229,8 @@
   }
   #quiz-data .next-intro {
     float: right;
+    -webkit-box-shadow: 0 4px #834426;
+            box-shadow: 0 4px #834426;
   }
   #quiz-data .can {
     padding: 1em;
@@ -264,12 +294,48 @@
   .resume .result-message {
     font-size: 150%;
   }
+  .resume .buttons #reload {
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
   .resume .buttons #reload img {
     width: 60px;
     height: 60px;
   }
+  .resume .buttons #menu {
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
   .resume .buttons #menu img {
     width: 50px;
+  }
+  .resume .buttons #siguienteNivel {
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
   .resume .buttons #siguienteNivel img {
     width: 60px;
