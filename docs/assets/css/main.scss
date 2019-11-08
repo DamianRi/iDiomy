@@ -539,7 +539,28 @@
   right: 0px;
 }
 
+// Estilo para la el div donde se despliega el juego de cartas
+.game-card{
+  width: 100%;
 
+  #quitar-juego{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    //background-image: url("./../img/iconos/right-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #eccf0d;
+    border: 0px;
+    border-radius: 999px;
+    float: right;
+    animation: animated tada;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 1s;    
+  }
+
+}
 
 .resume {
   width: 100%;
