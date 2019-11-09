@@ -1,3 +1,21 @@
+.game-card {
+  width: 100%;
+}
+
+.game-card #quitar-juego {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #eccf0d;
+  border: 0px;
+  border-radius: 999px;
+  bottom: 5%;
+  right: 5%;
+  position: absolute;
+}
+
 .game {
   width: 100%;
 }
@@ -13,7 +31,7 @@
   height: 100%;
   min-height: 50vh;
   margin: auto;
-  padding: 10%;
+  padding: 0 10%;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   -webkit-perspective: 1000px;
@@ -30,19 +48,19 @@
           transform: scale(1);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 1.2s;
-  transition: -webkit-transform 1.2s;
-  transition: transform 1.2s;
-  transition: transform 1.2s, -webkit-transform 1.2s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .memory-card:active {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: -webkit-transform 1.2s;
-  transition: -webkit-transform 1.2s;
-  transition: transform 1.2s;
-  transition: transform 1.2s, -webkit-transform 1.2s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .memory-card.flip {
@@ -54,7 +72,7 @@
   height: 100%;
   width: 100%;
   padding: 20px;
-  position: absolute;
+  position: relative;
   border-radius: 10px;
   background: #5c9ead;
   -webkit-box-shadow: 4px 4px #326273;

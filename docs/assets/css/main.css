@@ -592,30 +592,6 @@
   right: 0px;
 }
 
-.game-card {
-  width: 100%;
-}
-
-.game-card #quitar-juego {
-  padding: 10px;
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: #eccf0d;
-  border: 0px;
-  border-radius: 999px;
-  float: right;
-  -webkit-animation: animated tada;
-          animation: animated tada;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
 .resume {
   width: 100%;
   text-align: center;

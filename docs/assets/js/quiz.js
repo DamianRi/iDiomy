@@ -111,6 +111,7 @@ function showNext(n) {
       $('.stars img').addClass('animated heartBeat estrellas');
     }
   } else if(size-1 < current){
+    loadCards();
     $(".game-card").addClass('fadeIn').removeClass('hide');
     console.log("Juego Mostrado");
     showedGame = true; 

@@ -1,11 +1,23 @@
-var cards = document.querySelectorAll('.memory-card');
-console.log(cards);
-
+var finishedGame = false;
+var cards = null;
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-var pares = cards.length/2;
+var pares = null;
+function loadCards(){
+  console.log("Cargando cartas...");
+  cards = document.querySelectorAll('.memory-card');
+  cards.forEach(card => card.addEventListener('click', flipCard));
+
+  console.log(cards);
+  pares = cards.length/2;
+
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+}
 
 function flipCard() {
   console.log(pares);
@@ -47,7 +59,10 @@ function checkForMatch() {
     pares--;
     if (pares == 0) {
       console.log("Juego Terminado");
-      
+      finishedGame = true;
+      setTimeout(() => {
+        showNext(current);
+      }, 1200);
     }
   }else{
     unflipCards(); // Las volteamos boca abajo
@@ -63,7 +78,7 @@ function disableCards() {
     firstCard.style.visibility = 'hidden';
     secondCard.style.visibility = 'hidden';
     resetBoard();
-  }, 1500);
+  }, 1200);
 
 }
 
@@ -75,7 +90,7 @@ function unflipCards() {
     secondCard.classList.remove('flip');
 
     resetBoard();
-  }, 1000);
+  }, 1300);
 }
 
 function resetBoard() {
@@ -84,10 +99,14 @@ function resetBoard() {
 }
 
 (function shuffle() {
-  cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 12);
-    card.style.order = randomPos;
-  });
+  if (cards != null) {
+    cards.forEach(card => {
+      let randomPos = Math.floor(Math.random() * 12);
+      card.style.order = randomPos;
+    });    
+  }
 })();
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+//if (cards != null) {
+//  cards.forEach(card => card.addEventListener('click', flipCard));
+//}
