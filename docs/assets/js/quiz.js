@@ -32,13 +32,19 @@ $('#container').on('click','.next-button', function(){
   showNext(current);
 });
 
+
+var showedGame = false; // Variable para saber cuando el juego ha sido desplegado 
+
 function showNext(n) {
   $('.fadeInUp').addClass('hide').removeClass('fadeInUp');
   current++;
   var items = $('.question');
   var size = items.length;
 
-  if (size - 1 < current) {
+  console.log("Size:"+size, "< Current"+current, "ShowedGame"+showedGame);
+  if (size - 1 < current && showedGame) {
+    $('.fadeIn').addClass('hide').removeClass('fadeIn'); // Quitamos el div del juego
+
     var quizData = $('#quiz-data');
     var category = quizData.attr('data-category');
     var quiz = quizData.attr('data-quiz');
@@ -104,7 +110,13 @@ function showNext(n) {
       $('.stars').append($('<img>',{class:'star',src:'assets/img/resultado_quiz/star.png'}))
       $('.stars img').addClass('animated heartBeat estrellas');
     }
-  } else {
+  } else if(size-1 < current){
+    loadCards();
+    $(".game-card").addClass('fadeIn').removeClass('hide');
+    console.log("Juego Mostrado");
+    showedGame = true; 
+  }else{
+    showedGame = false;
     $(items[current]).addClass('fadeInUp').removeClass('hide');
   }
 }
@@ -132,8 +144,9 @@ $('#container').on('click','.volver-niveles',function(e){
   $(this).volverNiveles();
 });
 
+// Función para quitar los intros actuales
 $('#container').on('click','.skip',function(){
-  showQuiz();
+  showQuiz(); // Se contienua mostrando las preguntas del nivel
 });
 
 $('#container').on('click','.next-intro',function(){
@@ -147,14 +160,17 @@ $('#container').on('click','.next-intro',function(){
   }
 });
 
+// Función inciar con el despliegues de las preguntas
 function showQuiz() {
   $("#intro").addClass("hide");
   $(".quiz.items").removeClass("hide");
 }
 
+// Al terminar las preguntas y mostrar el resumen del nivel
+// al hacer click en el botón de siguiente nivel
 $('#container').on('click', '.siguienteNivel', function(){
-  $(this).renderNextQuiz();
-  $('.body').removeClass('body').addClass('body-second-style');
+  $(this).renderNextQuiz(); // Iniciamos el despliegue del siguiento nivel
+  $('.body').removeClass('body').addClass('body-second-style'); // Mostramos el estilo para las intros y preguntas
 });
 
 $('#container').on('click','#menu', function(){

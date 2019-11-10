@@ -96,7 +96,7 @@ $.fn.volverIntros = function(){
   var actual = document.getElementById("quiz-data");
   var nivelActual = actual.getAttribute("data-category");
   var introActual = actual.getAttribute("data-quiz");
-  console.log(nivelActual);
+  console.log("Nivel Actual"+nivelActual);
 
   var levels = categoriesActuales.items[nivelActual-1];
   $('#container').load('assets/templates/quiz.html',

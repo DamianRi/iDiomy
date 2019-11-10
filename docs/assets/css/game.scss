@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "KidsZone";
+    src: url("./../css/Kids\ Zone.woff");
+  }  
+
+// Estilo para la el div donde se despliega el juego de cartas
+.game-card{
+    width: 100%;
+  
+    .next-button{
+        padding: 10px;
+        background-image: none;
+        background-color:#c0c0c0;
+        border: 0px;
+        border-radius: 999px;
+        float: right;
+    }
+
+    #quitar-juego{
+        font-family: 'Denk One', sans-serif;
+        font-size: 1.5em;
+        color: #003333;
+        padding: 10px;
+        width: 25%;
+        height: 8%;
+        background-color: #c0c0c0;
+        border: 0px;
+        border-radius: 999px;
+        bottom: 5%;
+        right: 5%;
+        position: absolute;
+        box-shadow: 0 4px #003333;
+    }
+  
+}
+
+.game{
+    width: 100%;
+}
+
+.game-space{
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 50vw;
+    height: 100%;
+    min-height: 50vh;
+    margin: auto;
+    padding: 0 10%;
+    //flex-wrap: wrap;
+    transition-duration: 1s;
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+.memory-card {
+    width: 90%;
+    height: 90%;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    
+}
+
+.memory-card:active {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.back-face{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    background: #9fb9c1;
+    box-shadow: 4px 4px #326273;
+    border: 2px solid #326273;
+    backface-visibility: hidden;
+    
+}
+.front-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 0 4px #326273;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .game-space{
+        display: grid;
+        grid-template-columns:  auto auto auto;
+        width: 100%;
+        max-width: 1200px;
+        min-width: 50vw;
+        height: 68vh;
+        min-height: 50vh;
+        margin: auto;
+        padding: 0;
+        //flex-wrap: wrap;
+        transition-duration: 1s;
+        perspective: 1000px;
+        background-color: transparent;
+        overflow: scroll;
+    }
+
+    .game-card{
+        width: 100%;
+      
+        .next-button{
+            padding: 10px;
+            background-image: none;
+            background-color:#c0c0c0;
+            border: 0px;
+            border-radius: 999px;
+            float: right;
+        }
+
+        #quitar-juego{
+            font-family: 'Denk One', sans-serif;
+            font-size: 1.5em;
+            color: #003333;
+            padding: 10px;
+            width: 50%;
+            height: 8%;
+            background-color: #c0c0c0;
+            border: 0px;
+            border-radius: 999px;
+            bottom: 5%;
+            right: 5%;
+            position: absolute;
+            box-shadow: 0 4px #003333;
+        }
+      
+    }
+    
+}

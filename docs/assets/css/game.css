@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "KidsZone";
+  src: url("./../css/Kids Zone.woff");
+}
+
+.game-card {
+  width: 100%;
+}
+
+.game-card .next-button {
+  padding: 10px;
+  background-image: none;
+  background-color: #c0c0c0;
+  border: 0px;
+  border-radius: 999px;
+  float: right;
+}
+
+.game-card #quitar-juego {
+  font-family: 'Denk One', sans-serif;
+  font-size: 1.5em;
+  color: #003333;
+  padding: 10px;
+  width: 25%;
+  height: 8%;
+  background-color: #c0c0c0;
+  border: 0px;
+  border-radius: 999px;
+  bottom: 5%;
+  right: 5%;
+  position: absolute;
+  -webkit-box-shadow: 0 4px #003333;
+          box-shadow: 0 4px #003333;
+}
+
+.game {
+  width: 100%;
+}
+
+.game-space {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 50vw;
+  height: 100%;
+  min-height: 50vh;
+  margin: auto;
+  padding: 0 10%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  background-color: transparent;
+}
+
+.memory-card {
+  width: 90%;
+  height: 90%;
+  margin: 5px;
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.memory-card:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.memory-card.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.back-face {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  background: #9fb9c1;
+  -webkit-box-shadow: 4px 4px #326273;
+          box-shadow: 4px 4px #326273;
+  border: 2px solid #326273;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 4px #326273;
+          box-shadow: 0 4px #326273;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .game-space {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 50vw;
+    height: 68vh;
+    min-height: 50vh;
+    margin: auto;
+    padding: 0;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    background-color: transparent;
+    overflow: scroll;
+  }
+  .game-card {
+    width: 100%;
+  }
+  .game-card .next-button {
+    padding: 10px;
+    background-image: none;
+    background-color: #c0c0c0;
+    border: 0px;
+    border-radius: 999px;
+    float: right;
+  }
+  .game-card #quitar-juego {
+    font-family: 'Denk One', sans-serif;
+    font-size: 1.5em;
+    color: #003333;
+    padding: 10px;
+    width: 50%;
+    height: 8%;
+    background-color: #c0c0c0;
+    border: 0px;
+    border-radius: 999px;
+    bottom: 5%;
+    right: 5%;
+    position: absolute;
+    -webkit-box-shadow: 0 4px #003333;
+            box-shadow: 0 4px #003333;
+  }
+}
+/*# sourceMappingURL=game.css.map */
