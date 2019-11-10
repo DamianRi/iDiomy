@@ -272,7 +272,7 @@
   }
   .question {
     margin: 0 10px 0 10px;
-    width: auto;
+    width: 95%;
   }
   .question .pregunta {
     font-size: 1.2em;

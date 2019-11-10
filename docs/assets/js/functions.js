@@ -8,6 +8,7 @@ function appLoad() {
   } else {
     $('#container').load('assets/templates/panel.html',function(){
       renderIdiomas(idiomas);
+      loadImg();
     });
   }
 }

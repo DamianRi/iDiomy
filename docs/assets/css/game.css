@@ -26,9 +26,6 @@
   background-color: #c0c0c0;
   border: 0px;
   border-radius: 999px;
-  bottom: 5%;
-  right: 5%;
-  position: absolute;
   -webkit-box-shadow: 0 4px #003333;
           box-shadow: 0 4px #003333;
 }
@@ -42,6 +39,25 @@
   display: grid;
   -ms-grid-columns: auto auto auto auto;
       grid-template-columns: auto auto auto auto;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 50vw;
+  height: 100%;
+  min-height: 50vh;
+  margin: auto;
+  padding: 0 10%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  background-color: transparent;
+}
+
+.game-space-level3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
   width: 100%;
   max-width: 1200px;
   min-width: 50vw;
@@ -85,7 +101,7 @@
           transform: rotateY(180deg);
 }
 
-.back-face {
+.back-face, .back-face-level3 {
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -99,7 +115,7 @@
           backface-visibility: hidden;
 }
 
-.front-face {
+.front-face, .front-face-level3 {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -130,7 +146,7 @@
     width: 100%;
     max-width: 1200px;
     min-width: 50vw;
-    height: 68vh;
+    height: 100%;
     min-height: 50vh;
     margin: auto;
     padding: 0;
@@ -139,7 +155,51 @@
     -webkit-perspective: 1000px;
             perspective: 1000px;
     background-color: transparent;
-    overflow: scroll;
+  }
+  .game-space-level3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 50vw;
+    height: 100%;
+    min-height: 50vh;
+    margin: auto;
+    padding: 0;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    background-color: transparent;
+  }
+  .back-face-level3 {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    background: #9fb9c1;
+    -webkit-box-shadow: 4px 4px #326273;
+            box-shadow: 4px 4px #326273;
+    border: 2px solid #326273;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .front-face-level3 {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 4px #326273;
+            box-shadow: 0 4px #326273;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
   .game-card {
     width: 100%;
@@ -162,9 +222,6 @@
     background-color: #c0c0c0;
     border: 0px;
     border-radius: 999px;
-    bottom: 5%;
-    right: 5%;
-    position: absolute;
     -webkit-box-shadow: 0 4px #003333;
             box-shadow: 0 4px #003333;
   }
