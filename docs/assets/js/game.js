@@ -106,7 +106,3 @@ function resetBoard() {
     });    
   }
 })();
-
-//if (cards != null) {
-//  cards.forEach(card => card.addEventListener('click', flipCard));
-//}
