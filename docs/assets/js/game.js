@@ -6,40 +6,50 @@ let firstCard, secondCard;
 var pares = null;
 
 function loadCards(){
-  var quizData = document.getElementById('quiz-data');
-  var quiz = quizData.getAttribute('data-quiz');
-
+  
   const gamespace = document.getElementById("GameSpace");
   const frontCards = document.querySelectorAll('.front-face');
   const backCards = document.querySelectorAll('.back-face');
+  var quizData = document.getElementById('quiz-data');
+  var quiz = quizData.getAttribute('data-quiz');
+  // Cuando es el tercer nivel y hay muchas cartas
   if (quiz == 3) {
     gamespace.classList.remove('game-space');
     gamespace.classList.add('game-space-level3');
+    // Para cada elemento frontal de la carta le cambiamos el 
+    // estilo para poder visualizarse correctamente
     frontCards.forEach(fCrad => {
       fCrad.classList.remove('front-face');
       fCrad.classList.add('front-face-level3');      
     });
+    // Para cada elemento reves de la carta le cambiamos el 
+    // estilo para poder visualizarse correctamente
     backCards.forEach(bCard => {
       bCard.classList.remove('back-face');
       bCard.classList.add('back-face-level3');
     });
 
-  }else{
-    gamespace.classList.add('game-space');
-    //$('.front-face').style.padding = "20px";
-    //$('.back-face').style.padding = "20px";
   }
 
-
   console.log("Cargando cartas...");
+
   cards = document.querySelectorAll('.memory-card');
   var nCards = 3*quiz*2;
   var par = false;
   var imgCard = 0;
+  var imgsCardsReadyUpdate = [];
   cards.forEach(card => {
     // Si es la primera carta le ponemos una imagen
     if(!par){
+      // Generamos valores aleatorios para las imagenes de las cartas
       imgCard = Math.floor(Math.random() * 51);
+      while (imgsCardsReadyUpdate.includes(imgCard)){
+        // Si ya esta el valor obtenemos otro
+        console.log("Cambiando valor"+imgCard);
+        imgCard = Math.floor(Math.random() * 51); 
+        
+      }
+      imgsCardsReadyUpdate.push(imgCard);
       card.childNodes[1].src = "assets/img/game-svg/"+imgCard+".svg";
       par = true;
     // A la siguiente carta le ponemos la misma imagen
